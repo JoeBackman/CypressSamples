@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   env: {
-    url: "https://www.phptravels.com/demo",
+    url: "https://www.ultimateqa.com/automation",
   },
 
   e2e: {

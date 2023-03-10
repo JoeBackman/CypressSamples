@@ -41,10 +41,11 @@ describe('Sauce Demo Login', () => {
         //Verify Cart total is calculated properly
         cy.contains('Item total').should('contain', '45.98')
         cy.contains('Tax').should('contain', '3.68')
-        cy.contains('Total').should('contain', '49.66')
+        cy.get('div.summary_info_label.summary_total_label').should('contain', '49.66')
 
         //Finalize and confirm order
         cy.contains('Finish').click()
-        cy.contains('THANK YOU FOR YOUR ORDER').should('be.visible').should('not')
+        cy.get('h2.complete-header').should('contain', 'Thank you for your order!')
+        cy.get('button[name="back-to-products"]').click()
     })
 })
