@@ -30,13 +30,6 @@ describe('Sauce Demo Login', () => {
         //Proceed to checkout
         cy.contains('Checkout').click()
 
-        //Check error handling on UI
-        // cy.contains('Continue').click()
-        // cy.get('input[id="first-name"]').should('contain', 'svg')
-        // cy.get('input[id="last-name"]')
-        // cy.get('input[id="postal-code"]')
-
-
         //Populate checkout information
         cy.get('input[id="first-name"]').type('Joseph')
         cy.get('input[id="last-name"]').type('Backman')
